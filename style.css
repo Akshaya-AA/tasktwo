@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.table td, .table th {
+    vertical-align: middle;
+}
+
+.text-success {
+    color: green !important;
+}
+
+.text-danger {
+    color: red !important;
+}
+
+.btn {
+    background-color: purple;
+    border-color: purple;
+}
+
+.btn:hover {
+    background-color: purple;
+}
+
+.button {
+    border-radius: 5px;
+}
+
+input:invalid {
+    border-color: gray;
+}
+
+input:valid {
+    border-color: green;
+}
+
+.form-container {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h5,
+.form-container label {
+    font-weight: bold;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        text-align: center;
+    }
+
+    .sidebar img {
+        width: 50%;
+        height: auto;
+    }
+
+    .form-container {
+        padding: 15px;
+    }
+}
+.form-control:hover
+{
+    background-color: lightsteelblue;
+}
