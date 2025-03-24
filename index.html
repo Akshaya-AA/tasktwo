@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Will</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="script.js">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .table td, .table th {
+            vertical-align: middle;
+        }
+        .btn {
+            background-color: purple;
+            border-color: purple;
+        }
+        .btn-light {
+            background-color: white;
+            color: black;
+            border: 1px solid black;
+        }
+        .btn-light:hover {
+            background-color: #f8f9fa;
+            color: black;
+        }
+        .btn:hover {
+            background-color: darkmagenta;
+        }
+        .form-container {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            font-weight: bold;
+        }
+        @media (max-width: 768px) {
+            .sidebar {
+                text-align: center;
+            }
+            .form-container {
+                padding: 15px;
+            }
+            .btn {
+                width: 100%;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 bg-dark text-white p-4 sidebar text-center">
+                <img src="images/review3.jpeg" alt="Profile" class="rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+                <h6>D.O.C: 28.04.2023</h6>
+                <h6>Status: <span class="text-white">Complete</span></h6>
+                <button class="btn btn-light btn-sm mt-3 w-50">Back Home</button>
+            </div>  
+            <div class="col-md-9 p-4">
+                <div class="mb-3">
+                    <button class="btn btn-primary">ADD Beneficiaries</button>
+                    <button class="btn btn-primary">ADD Asset</button>
+                    <button class="btn btn-primary">ADD Liability</button>
+                    <button class="btn btn-primary">CREATE Links</button>
+                    <button class="btn btn-primary">ADD Signatures</button>
+                    <button class="btn btn-primary">Will Generation</button>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>S. No</th>
+                                <th>Name</th>
+                                <th>Relationship</th>
+                                <th>Date of Birth</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="beneficiaryTable">
+                            <tr>
+                                <td>1</td>
+                                <td>Akshaya</td>
+                                <td>Sister</td>
+                                <td>2002-03-06</td>
+                                <td class="text-success">Active</td>
+                                <td>
+                                    <button class="btn btn-sm btn-secondary edit">Edit</button>
+                                    <button class="btn btn-sm btn-danger delete">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Mohanapriya</td>
+                                <td>Sister</td>
+                                <td>1988-10-04</td>
+                                <td class="text-danger">Inactive</td>
+                                <td>
+                                    <button class="btn btn-sm btn-secondary edit">Edit</button>
+                                    <button class="btn btn-sm btn-danger delete">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Aswini</td>
+                                <td>Sister</td>
+                                <td>2005-07-14</td>
+                                <td class="text-success">Active</td>
+                                <td>
+                                    <button class="btn btn-sm btn-secondary edit">Edit</button>
+                                    <button class="btn btn-sm btn-danger delete">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="container mt-4 form-container">
+                    <h5>Add New Beneficiary</h5>
+                    <form id="beneficiaryForm">
+                        <div class="mb-3">
+                            <label class="form-label">S.No</label>
+                            <input type="number" id="sno" class="form-control"  placeholder="enter serinal number">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Name</label>
+                            <input type="text" id="name" class="form-control" pattern="[A-Za-z ]+" title="Only letters allowed"  placeholder="enter name">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Relationship</label>
+                            <input type="text" id="relationship" class="form-control" pattern="[A-Za-z ]+" title="Only letters allowed" placeholder="enter relationship" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Date of Birth</label>
+                            <input type="date" id="dob" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn w-100">Add Beneficiary</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
